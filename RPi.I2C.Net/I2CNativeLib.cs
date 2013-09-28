@@ -16,7 +16,7 @@ namespace RPi.I2C.Net
 		[DllImport("libnativei2c.so", EntryPoint = "writeBytes", SetLastError = true)]
 		public static extern int WriteBytes(int busHandle, int addr, byte[] buf, int len);
 
-        [DllImport("libnativei2c.so", EntryPoint = "readRegister", SetLastError = true)]
-        public static extern int readRegister(int busHandle, int address, byte register, byte[] data);
+        //[DllImport("libnativei2c.so", EntryPoint = "readRegister", SetLastError = true)]
+        //public static extern int readRegister(int busHandle, int address, byte register, byte[] data); // sorry seems unstable
 	}
 }

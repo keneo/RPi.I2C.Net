@@ -4,16 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0E90D49-343B-4BF5-B59C-ACBDB20D9275}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{AA873F33-4C9B-41FF-B21D-D48F62E02971}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SampleApp</RootNamespace>
-    <AssemblyName>SampleApp</AssemblyName>
+    <RootNamespace>RPi.I2C.Net.Drivers</RootNamespace>
+    <AssemblyName>RPi.I2C.Net.Drivers</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,19 +33,21 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Mpu6050Driver\Mpu6050.cs" />
+    <Compile Include="Mpu6050Driver\RawReadings.cs" />
+    <Compile Include="Mpu6050Driver\Readings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RPi.I2C.Net.Drivers\RPi.I2C.Net.Drivers.csproj">
-      <Project>{aa873f33-4c9b-41ff-b21d-d48f62e02971}</Project>
-      <Name>RPi.I2C.Net.Drivers</Name>
-    </ProjectReference>
     <ProjectReference Include="..\RPi.I2C.Net\RPi.I2C.Net.csproj">
-      <Project>{2ae6a02f-4b57-43a1-8c19-2917008215d5}</Project>
+      <Project>{2AE6A02F-4B57-43A1-8C19-2917008215D5}</Project>
       <Name>RPi.I2C.Net</Name>
     </ProjectReference>
   </ItemGroup>

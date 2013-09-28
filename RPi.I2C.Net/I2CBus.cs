@@ -167,13 +167,20 @@ namespace RPi.I2C.Net
 			return buf;
 		}
 
-
-        public byte[] ReadDeviceRegister(int address, byte register)
+        public short ReadWord(int address)
         {
-            byte[] buf = new byte[10];
-            int res = I2CNativeLib.readRegister(busHandle, address, register ,buf);
-            return (buf);
-        
+            byte[] res = ReadBytes(address, 2);
+
+            return (short)((res[0] << 8) | res[1]);
         }
+
+
+        //public byte[] ReadDeviceRegister(int chipAddress, byte register, int count)
+        //{
+        //    byte[] buf = new byte[count];
+        //    int res = I2CNativeLib.readRegister(busHandle, chipAddress, register ,buf);
+        //    return (buf);
+        
+        //}
 	}
 }
