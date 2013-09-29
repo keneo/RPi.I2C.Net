@@ -4,12 +4,12 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E0E90D49-343B-4BF5-B59C-ACBDB20D9275}</ProjectGuid>
+    <ProjectGuid>{3DBDD0B6-D77A-4CDF-BD86-5671EAEFD989}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SampleApp</RootNamespace>
-    <AssemblyName>SampleApp</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <RootNamespace>SampleApp.Mpu6050</RootNamespace>
+    <AssemblyName>SampleApp.Mpu6050</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -34,15 +34,23 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\RPi.I2C.Net.Devices\RPi.I2C.Net.Devices.csproj">
+      <Project>{AA873F33-4C9B-41FF-B21D-D48F62E02971}</Project>
+      <Name>RPi.I2C.Net.Devices</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RPi.I2C.Net\RPi.I2C.Net.csproj">
-      <Project>{2ae6a02f-4b57-43a1-8c19-2917008215d5}</Project>
+      <Project>{2AE6A02F-4B57-43A1-8C19-2917008215D5}</Project>
       <Name>RPi.I2C.Net</Name>
     </ProjectReference>
   </ItemGroup>

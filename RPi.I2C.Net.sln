@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\Samp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.I2C.Net.Devices", "RPi.I2C.Net.Devices\RPi.I2C.Net.Devices.csproj", "{AA873F33-4C9B-41FF-B21D-D48F62E02971}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp.Mpu6050", "SampleApp.Mpu6050\SampleApp.Mpu6050.csproj", "{3DBDD0B6-D77A-4CDF-BD86-5671EAEFD989}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{AA873F33-4C9B-41FF-B21D-D48F62E02971}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA873F33-4C9B-41FF-B21D-D48F62E02971}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA873F33-4C9B-41FF-B21D-D48F62E02971}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DBDD0B6-D77A-4CDF-BD86-5671EAEFD989}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DBDD0B6-D77A-4CDF-BD86-5671EAEFD989}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DBDD0B6-D77A-4CDF-BD86-5671EAEFD989}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DBDD0B6-D77A-4CDF-BD86-5671EAEFD989}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
