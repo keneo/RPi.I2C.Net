@@ -12,8 +12,6 @@ namespace SampleApp.Mpu6050
     {
         static void Main(string[] args)
         {
-            int sleep = args.Length == 0 ? 0 : int.Parse(args[0]);
-
             using (var bus = I2CBus.Open("/dev/i2c-1"))
             {
                 var mpu6050 = new Mpu6050Api(bus);
