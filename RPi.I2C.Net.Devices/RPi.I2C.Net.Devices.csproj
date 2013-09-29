@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Mpu6050Driver\Mpu6050.cs" />
+    <Compile Include="Mpu6050Driver\Mpu6050Api.cs" />
     <Compile Include="Mpu6050Driver\RawReadings.cs" />
     <Compile Include="Mpu6050Driver\Readings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

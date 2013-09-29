@@ -16,40 +16,31 @@ namespace SampleApp.Mpu6050
 
             using (var bus = I2CBus.Open("/dev/i2c-1"))
             {
-                var sensor = new RPi.I2C.Net.Devices.Mpu6050Driver.Mpu6050(bus);
+                var mpu6050 = new Mpu6050Api(bus);
 
-                sensor.Init();
+                Console.Write("Initialization...");
+                mpu6050.Init();
+                Console.WriteLine("OK");
 
-                for (; ; )
+                Console.Write("Calibration...");
+                var baseReadings = mpu6050.ReadSensors(1000);
+                Console.WriteLine("OK");
+                Console.WriteLine("Base readings: " + baseReadings);
+                Console.WriteLine();
+                Console.WriteLine("Streaming... (Press CTRL+C to stop)");
+
+
+                Readings accumulator = new Readings();
+
+                for (;;)
                 {
-                    int probes = 100;
+                    var r = mpu6050.ReadSensors(100).DiffrenceTo(baseReadings);
 
-                    Readings[] accumulator = new Readings[probes];
-
-                    for (int i = 0; i < probes; i++)
-                    {
-                        accumulator[i] = sensor.ReadRawReadings().Decode();
-
-                        if (sleep > 0)
-                            System.Threading.Thread.Sleep(sleep);
-                    }
-
-                    Readings r = new Readings()
-                    {
-                        Acc = new double[3] { accumulator.Average(a => a.Acc[0]), accumulator.Average(a => a.Acc[1]), accumulator.Average(a => a.Acc[2]), },
-                        Temp = accumulator.Average(a => a.Temp),
-                        Gyro = new double[3] { accumulator.Average(a => a.Gyro[0]), accumulator.Average(a => a.Gyro[1]), accumulator.Average(a => a.Gyro[2]), }
-                    };
-
-                    //double temp = sensor.ReadTemperature();
-
-
+                    accumulator.Accumulate(r);
 
                     DateTime now = DateTime.Now;
 
-                    Console.WriteLine(now + "." + now.Millisecond.ToString("000") + ": " + r.ToString());
-                    //Console.WriteLine(t);
-
+                    Console.WriteLine(now + "." + now.Millisecond.ToString("000") + ": " + accumulator);
                 }
             }
         }
