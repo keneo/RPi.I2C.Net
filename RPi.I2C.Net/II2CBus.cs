@@ -63,5 +63,7 @@ namespace RPi.I2C.Net
 
         //byte[] ReadDeviceRegister(int address, byte register, int count);
 
+	    
+
 	}
 }

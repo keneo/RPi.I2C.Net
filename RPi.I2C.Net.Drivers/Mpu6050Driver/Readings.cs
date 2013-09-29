@@ -15,12 +15,13 @@ namespace RPi.I2C.Net.Drivers.Mpu6050Driver
                 double z = Acc[2];
                 double sum = x*x + y*y + z*z;
 
-                return sum;// *9.81 / 280000000;
+                // should be Math.Sqrt now but its buggy
+                return sum;
             }
         }
 
         public double Temp;
-        public short[] Gyro;
+        public double[] Gyro;
 
         public override string ToString()
         {
@@ -28,18 +29,18 @@ namespace RPi.I2C.Net.Drivers.Mpu6050Driver
                 base.ToString()
                 +
                 " Acc: "
-                + Acc[0].ToString("+00.00;-00.00") + ", "
-                + Acc[1].ToString("+00.00;-00.00") + ", "
-                + Acc[2].ToString("+00.00;-00.00") + ", "
-                + AccLength2.ToString("+000.0;-000.0") + ", "
+                + Acc[0].ToString("+00.00G;-00.00G") + ", "
+                + Acc[1].ToString("+00.00G;-00.00G") + ", "
+                + Acc[2].ToString("+00.00G;-00.00G") + ", "
+                + AccLength2.ToString("sqrt(000.00)G") + ", "
                 +
                 " Temp: "
-                + Temp.ToString("000.000") + ",\t"
+                + Temp.ToString("000.000c") + ",\t"
                 +
                 " Gyro: "
-                + Gyro[0].ToString("00000") + ", "
-                + Gyro[1].ToString("00000") + ", "
-                + Gyro[2].ToString("00000") + ", ";
+                + Gyro[0].ToString("00.000") + ", "
+                + Gyro[1].ToString("00.000") + ", "
+                + Gyro[2].ToString("00.000") + ", ";
         }
     }
 }

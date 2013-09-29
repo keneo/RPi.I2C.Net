@@ -1,11 +1,11 @@
 namespace RPi.I2C.Net
 {
-    public class I2CDevice
+    public class I2CDeviceSocket
     {
         private readonly II2CBus _bus;
         private readonly byte _chipAddress;
 
-        public I2CDevice(II2CBus bus, byte chipAddress)
+        public I2CDeviceSocket(II2CBus bus, byte chipAddress)
         {
             _bus = bus;
             _chipAddress = chipAddress;

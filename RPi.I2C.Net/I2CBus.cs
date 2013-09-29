@@ -174,6 +174,11 @@ namespace RPi.I2C.Net
             return (short)((res[0] << 8) | res[1]);
         }
 
+	    public I2CDeviceSocket this[byte deviceAddress]
+	    {
+	        get { return new I2CDeviceSocket(this, deviceAddress); }
+	    }
+
 
         //public byte[] ReadDeviceRegister(int chipAddress, byte register, int count)
         //{
