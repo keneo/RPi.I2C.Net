@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using RPi.I2C.Net;
-using RPi.I2C.Net.Drivers;
-using RPi.I2C.Net.Drivers.Mpu6050Driver;
+using RPi.I2C.Net.Devices.Mpu6050Driver;
+
 
 namespace SampleApp
 {

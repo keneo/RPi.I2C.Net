@@ -7,8 +7,8 @@
     <ProjectGuid>{AA873F33-4C9B-41FF-B21D-D48F62E02971}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>RPi.I2C.Net.Drivers</RootNamespace>
-    <AssemblyName>RPi.I2C.Net.Drivers</AssemblyName>
+    <RootNamespace>RPi.I2C.Net.Devices</RootNamespace>
+    <AssemblyName>RPi.I2C.Net.Devices</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

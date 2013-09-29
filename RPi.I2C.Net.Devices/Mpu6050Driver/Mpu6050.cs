@@ -1,4 +1,4 @@
-﻿namespace RPi.I2C.Net.Drivers.Mpu6050Driver
+﻿namespace RPi.I2C.Net.Devices.Mpu6050Driver
 {
     public class Mpu6050
     {

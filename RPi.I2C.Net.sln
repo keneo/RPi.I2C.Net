@@ -5,7 +5,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.I2C.Net", "RPi.I2C.Net\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{E0E90D49-343B-4BF5-B59C-ACBDB20D9275}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.I2C.Net.Drivers", "RPi.I2C.Net.Drivers\RPi.I2C.Net.Drivers.csproj", "{AA873F33-4C9B-41FF-B21D-D48F62E02971}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RPi.I2C.Net.Devices", "RPi.I2C.Net.Devices\RPi.I2C.Net.Devices.csproj", "{AA873F33-4C9B-41FF-B21D-D48F62E02971}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

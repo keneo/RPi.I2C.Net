@@ -41,9 +41,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RPi.I2C.Net.Drivers\RPi.I2C.Net.Drivers.csproj">
+    <ProjectReference Include="..\RPi.I2C.Net.Devices\RPi.I2C.Net.Devices.csproj">
       <Project>{aa873f33-4c9b-41ff-b21d-d48f62e02971}</Project>
-      <Name>RPi.I2C.Net.Drivers</Name>
+      <Name>RPi.I2C.Net.Devices</Name>
     </ProjectReference>
     <ProjectReference Include="..\RPi.I2C.Net\RPi.I2C.Net.csproj">
       <Project>{2ae6a02f-4b57-43a1-8c19-2917008215d5}</Project>
